@@ -16,7 +16,7 @@ type Props = {
   items: WorkItem[];
 };
 
-const TYPE_OPTIONS = ["すべて", "Mix", "Inst制作+Mix"] as const;
+const TYPE_OPTIONS = ["すべて", "Mix", "Inst制作", "Inst制作+Mix"] as const;
 
 const GENRE_OPTIONS = [
   "すべて",
