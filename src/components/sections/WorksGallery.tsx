@@ -20,12 +20,7 @@ const TYPE_OPTIONS = ["すべて", "Mix", "Inst制作", "Inst制作+Mix"] as con
 
 const GENRE_OPTIONS = [
   "すべて",
-  "ボカロ（バンド）",
-  "ボカロ（バラード）",
-  "ボカロ（電子・EDM）",
-  "ボカロ（ポップ）",
-  "ボカロ（ハイテンポ）",
-  "ボカロ（その他）",
+  "ボカロ",
   "j-pop",
   "k-pop",
   "洋楽",
