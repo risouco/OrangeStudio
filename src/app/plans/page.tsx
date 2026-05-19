@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import PageTitle from "@/components/ui/PageTitle";
 import Reveal from "@/components/ui/Reveal";
 import SmoothAnchor from "@/components/ui/SmoothAnchor";
+import CollapsiblePanel from "@/components/ui/CollapsiblePanel";
 
 export const metadata: Metadata = {
   title: "Plans",
@@ -152,16 +153,8 @@ export default function PlansPage() {
                 <li>・修正無制限</li>
               </ul>
 
-              <details className="group border-t border-b border-[rgba(26,26,26,0.08)] py-5">
-                <summary className="flex items-center justify-between cursor-pointer list-none">
-                  <span className="text-sm tracking-[0.2em] text-[color:var(--fg)]">
-                    オプション一覧
-                  </span>
-                  <span className="text-[color:var(--accent)] text-lg leading-none transition-transform duration-300 group-open:rotate-45">
-                    +
-                  </span>
-                </summary>
-                <div className="mt-6 space-y-6 text-sm">
+              <CollapsiblePanel summary="オプション一覧">
+                <div className="space-y-6 text-sm">
                   <ul className="space-y-3 text-[color:var(--sub)]">
                     <li className="flex justify-between gap-4 border-b border-[rgba(26,26,26,0.05)] pb-3">
                       <span>コラボ追加</span>
@@ -218,7 +211,7 @@ export default function PlansPage() {
                     </ul>
                   </div>
                 </div>
-              </details>
+              </CollapsiblePanel>
             </article>
           </Reveal>
 

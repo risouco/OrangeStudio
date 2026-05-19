@@ -17,12 +17,12 @@ export default function FaqList({ faqs }: Props) {
         const isOpen = openId === f.id;
         return (
           <Reveal key={f.id} delay={i * 40}>
-            <div className={`faq-item py-6 ${isOpen ? "is-open" : ""}`}>
+            <div className={`faq-item ${isOpen ? "is-open" : ""}`}>
               <button
                 type="button"
                 aria-expanded={isOpen}
                 onClick={() => setOpenId(isOpen ? null : f.id)}
-                className="w-full text-left cursor-pointer flex items-start gap-4"
+                className="w-full text-left cursor-pointer flex items-start gap-4 py-6"
               >
                 <span className="text-[color:var(--accent)] text-sm tracking-wider mt-0.5">
                   Q
@@ -36,7 +36,7 @@ export default function FaqList({ faqs }: Props) {
               </button>
               <div className="faq-content" aria-hidden={!isOpen}>
                 <div>
-                  <div className="mt-4 pl-7 md:pl-9">
+                  <div className="pl-7 md:pl-9 pb-6">
                     <p className="text-sm text-[color:var(--sub)] leading-[1.9]">
                       {f.answer || "—"}
                     </p>

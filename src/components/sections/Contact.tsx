@@ -38,6 +38,17 @@ export default function Contact() {
             </a>
           </div>
         </Reveal>
+
+        <Reveal delay={200}>
+          <p className="mt-10 text-sm text-[color:var(--sub)] tracking-wide">
+            <a
+              href="#faq"
+              className="border-b border-[color:var(--accent)] text-[color:var(--accent)] hover:opacity-70 transition-opacity pb-1"
+            >
+              よくあるご質問はこちら ↓
+            </a>
+          </p>
+        </Reveal>
       </div>
     </section>
   );

@@ -4,7 +4,7 @@ import SectionHeader from "@/components/ui/SectionHeader";
 export default function About() {
   return (
     <section id="about" className="section px-6">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-5xl mx-auto">
         <Reveal>
           <SectionHeader
             eyebrow="About"
