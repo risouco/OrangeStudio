@@ -70,12 +70,12 @@ function dt(prop: unknown): string | null {
 }
 
 // Generic safe query ------------------------------------------------
-async function queryAll(dataSourceId: string): Promise<Array<{ id: string; properties: Record<string, unknown> }>> {
+async function queryAll(dataSourceId: string): Promise<Array<{ id: string; created_time?: string; properties: Record<string, unknown> }>> {
   const client = getClient();
   if (!client) return [];
   try {
     const res = await client.dataSources.query({ data_source_id: dataSourceId, page_size: 100 });
-    const results = (res as { results?: Array<{ id: string; properties: Record<string, unknown> }> }).results ?? [];
+    const results = (res as { results?: Array<{ id: string; created_time?: string; properties: Record<string, unknown> }> }).results ?? [];
     return results;
   } catch (e) {
     console.warn("[notion] query failed", dataSourceId, e instanceof Error ? e.message : e);
