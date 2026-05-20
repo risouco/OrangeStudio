@@ -16,10 +16,10 @@ export const metadata: Metadata = {
     default: "OrangeStudio",
     template: "%s | OrangeStudio",
   },
-  description: "OrangeStudio — 運営×エンジニアの分業で、ご依頼に向き合う。",
+  description: "歌ってみた、楽曲制作の活動を、徹底したクオリティとサポートで支える制作チーム。",
   openGraph: {
     title: "OrangeStudio",
-    description: "OrangeStudio — 運営×エンジニアの分業で、ご依頼に向き合う。",
+    description: "歌ってみた、楽曲制作の活動を、徹底したクオリティとサポートで支える制作チーム。",
     siteName: "OrangeStudio",
     locale: "ja_JP",
     type: "website",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "OrangeStudio",
-    description: "OrangeStudio — 運営×エンジニアの分業で、ご依頼に向き合う。",
+    description: "歌ってみた、楽曲制作の活動を、徹底したクオリティとサポートで支える制作チーム。",
   },
 };
 
