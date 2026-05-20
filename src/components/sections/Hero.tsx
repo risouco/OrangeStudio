@@ -14,7 +14,7 @@ export default function Hero() {
           OrangeStudio
         </h1>
         <p className="mt-10 text-sm md:text-base text-[color:var(--sub)] leading-[1.9]">
-          質感やニュアンスを、最大限のクオリティで届けたい。
+          質感やニュアンスを、最大限のクオリティで。
         </p>
         <div className="mt-14">
           <a

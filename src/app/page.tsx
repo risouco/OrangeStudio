@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Hero from "@/components/sections/Hero";
+import NewsLatest from "@/components/sections/NewsLatest";
 import About from "@/components/sections/About";
 import Approach from "@/components/sections/Approach";
 import Reveal from "@/components/ui/Reveal";
@@ -44,6 +45,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <NewsLatest />
       <About />
       <Approach />
       <section className="section px-6 border-t border-[rgba(26,26,26,0.06)]">
