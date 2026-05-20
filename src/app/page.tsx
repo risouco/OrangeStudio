@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Hero from "@/components/sections/Hero";
+import QuickNav from "@/components/sections/QuickNav";
 import NewsLatest from "@/components/sections/NewsLatest";
 import About from "@/components/sections/About";
 import Approach from "@/components/sections/Approach";
@@ -45,6 +46,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <QuickNav />
       <NewsLatest />
       <About />
       <Approach />

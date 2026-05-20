@@ -14,39 +14,44 @@ function formatDate(iso: string | null): string {
 
 export default async function NewsLatest() {
   const news = await getNews();
-  const latest = news[0];
+  const items = news.slice(0, 2);
 
-  if (!latest) return null;
+  if (items.length === 0) return null;
 
   return (
     <section className="px-6 py-10 border-y border-[rgba(26,26,26,0.06)] bg-[rgba(224,122,44,0.025)]">
-      <div className="max-w-4xl mx-auto flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8">
-        <div className="flex items-center gap-3 shrink-0">
-          <span className="text-[10px] tracking-[0.4em] uppercase text-[color:var(--accent)]">
+      <div className="max-w-4xl mx-auto flex flex-col md:flex-row md:items-start gap-6 md:gap-10">
+        <div className="flex items-center justify-between md:flex-col md:items-start md:justify-start shrink-0 md:w-24">
+          <p className="text-[10px] tracking-[0.4em] uppercase text-[color:var(--accent)]">
             News
-          </span>
-          {latest.date && (
-            <span className="text-xs text-[color:var(--sub)] tracking-wider">
-              {formatDate(latest.date)}
-            </span>
-          )}
-        </div>
-
-        <Reveal className="flex-1 min-w-0">
+          </p>
           <Link
             href="/news"
-            className="block text-sm md:text-base text-[color:var(--fg)] hover:text-[color:var(--accent)] transition-colors truncate"
+            className="md:mt-3 text-xs tracking-[0.2em] text-[color:var(--sub)] hover:text-[color:var(--accent)] transition-colors"
           >
-            {latest.title}
+            一覧 →
           </Link>
-        </Reveal>
+        </div>
 
-        <Link
-          href="/news"
-          className="shrink-0 text-xs tracking-[0.2em] text-[color:var(--sub)] hover:text-[color:var(--accent)] transition-colors"
-        >
-          一覧 →
-        </Link>
+        <ul className="flex-1 min-w-0 space-y-3">
+          {items.map((n, i) => (
+            <Reveal key={n.id} as="li" delay={i * 60}>
+              <Link
+                href="/news"
+                className="group flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-5 hover:text-[color:var(--accent)] transition-colors"
+              >
+                {n.date && (
+                  <span className="text-xs text-[color:var(--sub)] tracking-wider shrink-0 sm:w-24">
+                    {formatDate(n.date)}
+                  </span>
+                )}
+                <span className="text-sm text-[color:var(--fg)] group-hover:text-[color:var(--accent)] transition-colors truncate">
+                  {n.title}
+                </span>
+              </Link>
+            </Reveal>
+          ))}
+        </ul>
       </div>
     </section>
   );
