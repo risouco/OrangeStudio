@@ -178,6 +178,10 @@ export default function PlansPage() {
                       </p>
                     </li>
                     <li className="flex justify-between gap-4 border-b border-[rgba(26,26,26,0.05)] pb-3">
+                      <span>カットアップ</span>
+                      <span className="text-[color:var(--fg)] whitespace-nowrap">〜¥2,000</span>
+                    </li>
+                    <li className="flex justify-between gap-4 border-b border-[rgba(26,26,26,0.05)] pb-3">
                       <span>アカペラ音源</span>
                       <span className="text-[color:var(--fg)] whitespace-nowrap">¥1,000</span>
                     </li>
@@ -188,8 +192,11 @@ export default function PlansPage() {
                   </ul>
 
                   <div className="pt-4">
-                    <p className="text-[11px] tracking-[0.3em] uppercase text-[color:var(--accent)] mb-3">
+                    <p className="text-[11px] tracking-[0.3em] uppercase text-[color:var(--accent)] mb-2">
                       納期短縮
+                    </p>
+                    <p className="text-[11px] text-[color:var(--sub)] leading-[1.7] mb-3">
+                      下記は基準となります。込み合っている場合は時価となりますので、別途お知らせいたします。
                     </p>
                     <ul className="space-y-3 text-[color:var(--sub)]">
                       <li className="flex justify-between gap-4 border-b border-[rgba(26,26,26,0.05)] pb-3">
