@@ -135,7 +135,10 @@ export async function getWorks(): Promise<Work[]> {
     }))
     .sort((a, b) => {
       if (a.featured !== b.featured) return a.featured ? -1 : 1;
-      return a.order - b.order;
+      // Orderが1以上のものを先に・空(0)は末尾
+      const ao = a.order > 0 ? a.order : Number.MAX_SAFE_INTEGER;
+      const bo = b.order > 0 ? b.order : Number.MAX_SAFE_INTEGER;
+      return ao - bo;
     });
 }
 
