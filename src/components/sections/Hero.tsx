@@ -13,6 +13,11 @@ export default function Hero() {
         <h1 className="text-4xl md:text-6xl font-light tracking-[0.15em] leading-[1.4]">
           OrangeStudio
         </h1>
+        <p className="mt-10 text-sm md:text-base text-[color:var(--sub)] leading-[1.9]">
+          歌ってみた、楽曲制作の活動を
+          <br className="md:hidden" />
+          徹底したクオリティとサポートで支える制作チーム。
+        </p>
       </Reveal>
     </section>
   );

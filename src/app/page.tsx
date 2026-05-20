@@ -46,8 +46,8 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <QuickNav />
       <NewsLatest />
+      <QuickNav />
       <About />
       <Approach />
       <section className="section px-6 border-t border-[rgba(26,26,26,0.06)]">
