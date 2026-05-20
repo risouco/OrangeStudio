@@ -131,8 +131,12 @@ export async function getWorks(): Promise<Work[]> {
       genres: msel(r.properties.Genre),
       effects: msel(r.properties.Effect),
       order: num(r.properties.Order) ?? 0,
+      featured: chk(r.properties.Featured),
     }))
-    .sort((a, b) => a.order - b.order);
+    .sort((a, b) => {
+      if (a.featured !== b.featured) return a.featured ? -1 : 1;
+      return a.order - b.order;
+    });
 }
 
 export async function getFaqs(): Promise<FAQ[]> {

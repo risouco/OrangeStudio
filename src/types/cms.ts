@@ -23,6 +23,7 @@ export type Work = {
   genres: string[];
   effects: string[];
   order: number;
+  featured: boolean;
 };
 
 export type FAQ = {
