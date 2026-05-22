@@ -287,30 +287,28 @@ export default function PlansPage() {
               </h2>
 
               <p className="text-sm text-[color:var(--sub)] leading-[1.9] mb-10">
-                オリジナル楽曲・カラオケ音源など、Instrumentの制作を承ります。料金は「基本ご依頼料金」と「曲尺に応じた制作料」の合算となります。
+                カラオケ音源・伴奏など、Instrumentの制作を承ります。料金は「基本ご依頼料金」と「曲尺に応じた制作料」の合算となります。
               </p>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-10">
-                <div className="border-l border-[color:var(--accent)] pl-5">
-                  <p className="text-[10px] tracking-[0.3em] text-[color:var(--sub)] mb-2">
-                    BASE
+              <div className="flex flex-col md:flex-row md:items-stretch gap-4 md:gap-0 mb-10">
+                <div className="flex-1 border-l border-[color:var(--accent)] pl-5">
+                  <p className="text-[11px] text-[color:var(--sub)] mb-2">
+                    基本ご依頼料金
                   </p>
                   <p className="text-lg font-light text-[color:var(--accent)]">
                     ¥10,000
                   </p>
-                  <p className="text-[11px] text-[color:var(--sub)] mt-1">
-                    基本ご依頼料金
-                  </p>
                 </div>
-                <div className="border-l border-[color:var(--accent)] pl-5">
-                  <p className="text-[10px] tracking-[0.3em] text-[color:var(--sub)] mb-2">
-                    LENGTH
+                <div className="md:flex md:items-center md:justify-center md:px-6 text-[color:var(--accent)] text-xl font-light">
+                  ＋
+                </div>
+                <div className="flex-1 border-l border-[color:var(--accent)] pl-5">
+                  <p className="text-[11px] text-[color:var(--sub)] mb-2">
+                    曲尺別 制作料
                   </p>
                   <p className="text-lg font-light">
-                    <span className="text-[color:var(--accent)]">¥20,000</span>〜
-                  </p>
-                  <p className="text-[11px] text-[color:var(--sub)] mt-1">
-                    曲尺別の制作料
+                    <span className="text-[color:var(--accent)]">¥20,000</span>
+                    〜
                   </p>
                 </div>
               </div>
@@ -350,7 +348,7 @@ export default function PlansPage() {
               </ul>
 
               <p className="text-[11px] text-[color:var(--sub)] leading-[1.7]">
-                ※ 5分を超える楽曲は別途お見積もりとなります。ご相談ください。
+                ※ 5分を超える楽曲も同方式でお見積もりいたします。ご相談ください。
               </p>
               <p className="text-[11px] text-[color:var(--sub)] leading-[1.7] mt-2">
                 例：3分の楽曲の場合 → 基本¥10,000 ＋ 制作料¥30,000 ＝ <span className="text-[color:var(--fg)]">合計 ¥40,000</span>
