@@ -32,11 +32,10 @@ const CARDS: PlanCard[] = [
     featured: true,
   },
   {
-    targetId: "short",
-    name: "ShortMix",
-    price: "準備中",
-    lead: "1本のご依頼からセットプランまで。",
-    comingSoon: true,
+    targetId: "inst",
+    name: "Inst制作",
+    price: "¥10,000 〜 / 曲尺別",
+    lead: "オリジナル楽曲・カラオケ音源の制作プランです。",
   },
 ];
 
@@ -277,11 +276,93 @@ export default function PlansPage() {
             </article>
           </Reveal>
 
+          {/* Inst制作 */}
+          <Reveal>
+            <article id="inst" className="scroll-mt-24">
+              <p className="text-xs tracking-[0.4em] uppercase text-[color:var(--accent)] mb-4">
+                Plan 03
+              </p>
+              <h2 className="text-2xl font-normal tracking-wide mb-8">
+                Inst制作
+              </h2>
+
+              <p className="text-sm text-[color:var(--sub)] leading-[1.9] mb-10">
+                オリジナル楽曲・カラオケ音源など、Instrumentの制作を承ります。料金は「基本ご依頼料金」と「曲尺に応じた制作料」の合算となります。
+              </p>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-10">
+                <div className="border-l border-[color:var(--accent)] pl-5">
+                  <p className="text-[10px] tracking-[0.3em] text-[color:var(--sub)] mb-2">
+                    BASE
+                  </p>
+                  <p className="text-lg font-light text-[color:var(--accent)]">
+                    ¥10,000
+                  </p>
+                  <p className="text-[11px] text-[color:var(--sub)] mt-1">
+                    基本ご依頼料金
+                  </p>
+                </div>
+                <div className="border-l border-[color:var(--accent)] pl-5">
+                  <p className="text-[10px] tracking-[0.3em] text-[color:var(--sub)] mb-2">
+                    LENGTH
+                  </p>
+                  <p className="text-lg font-light">
+                    <span className="text-[color:var(--accent)]">¥20,000</span>〜
+                  </p>
+                  <p className="text-[11px] text-[color:var(--sub)] mt-1">
+                    曲尺別の制作料
+                  </p>
+                </div>
+              </div>
+
+              <p className="text-[11px] tracking-[0.3em] uppercase text-[color:var(--accent)] mb-3">
+                曲尺別 制作料
+              </p>
+              <ul className="space-y-3 text-sm text-[color:var(--sub)] mb-6">
+                <li className="flex justify-between gap-4 border-b border-[rgba(26,26,26,0.05)] pb-3">
+                  <span>0:00 〜 2:00</span>
+                  <span className="text-[color:var(--fg)] whitespace-nowrap">¥20,000</span>
+                </li>
+                <li className="flex justify-between gap-4 border-b border-[rgba(26,26,26,0.05)] pb-3">
+                  <span>2:01 〜 2:30</span>
+                  <span className="text-[color:var(--fg)] whitespace-nowrap">¥25,000</span>
+                </li>
+                <li className="flex justify-between gap-4 border-b border-[rgba(26,26,26,0.05)] pb-3">
+                  <span>2:31 〜 3:00</span>
+                  <span className="text-[color:var(--fg)] whitespace-nowrap">¥30,000</span>
+                </li>
+                <li className="flex justify-between gap-4 border-b border-[rgba(26,26,26,0.05)] pb-3">
+                  <span>3:01 〜 3:30</span>
+                  <span className="text-[color:var(--fg)] whitespace-nowrap">¥35,000</span>
+                </li>
+                <li className="flex justify-between gap-4 border-b border-[rgba(26,26,26,0.05)] pb-3">
+                  <span>3:31 〜 4:00</span>
+                  <span className="text-[color:var(--fg)] whitespace-nowrap">¥40,000</span>
+                </li>
+                <li className="flex justify-between gap-4 border-b border-[rgba(26,26,26,0.05)] pb-3">
+                  <span>4:01 〜 4:30</span>
+                  <span className="text-[color:var(--fg)] whitespace-nowrap">¥45,000</span>
+                </li>
+                <li className="flex justify-between gap-4 pb-1">
+                  <span>4:31 〜 5:00</span>
+                  <span className="text-[color:var(--fg)] whitespace-nowrap">¥50,000</span>
+                </li>
+              </ul>
+
+              <p className="text-[11px] text-[color:var(--sub)] leading-[1.7]">
+                ※ 5分を超える楽曲は別途お見積もりとなります。ご相談ください。
+              </p>
+              <p className="text-[11px] text-[color:var(--sub)] leading-[1.7] mt-2">
+                例：3分の楽曲の場合 → 基本¥10,000 ＋ 制作料¥30,000 ＝ <span className="text-[color:var(--fg)]">合計 ¥40,000</span>
+              </p>
+            </article>
+          </Reveal>
+
           {/* shortMixセット */}
           <Reveal>
             <article id="short" className="scroll-mt-24">
               <p className="text-xs tracking-[0.4em] uppercase text-[color:var(--accent)] mb-4">
-                Plan 03
+                Plan 04
               </p>
               <h2 className="text-2xl font-normal tracking-wide mb-8">
                 shortMixセット
