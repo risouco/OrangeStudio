@@ -46,8 +46,16 @@ export default function WorksGallery({ items }: Props) {
   const gridTopRef = useRef<HTMLDivElement>(null);
 
   const filtered = useMemo(() => {
+    const matchesType = (workType: string | null, filter: string): boolean => {
+      if (filter === "すべて") return true;
+      if (!workType) return false;
+      // Mix と Inst制作 のフィルタは Inst制作+Mix も含む
+      if (filter === "Mix") return workType === "Mix" || workType === "Inst制作+Mix";
+      if (filter === "Inst制作") return workType === "Inst制作" || workType === "Inst制作+Mix";
+      return workType === filter;
+    };
     return items.filter((it) => {
-      if (typeFilter !== "すべて" && it.type !== typeFilter) return false;
+      if (!matchesType(it.type, typeFilter)) return false;
       if (genreFilter !== "すべて" && !it.genres.includes(genreFilter)) return false;
       if (effectFilter !== "すべて" && !it.effects.includes(effectFilter)) return false;
       return true;
