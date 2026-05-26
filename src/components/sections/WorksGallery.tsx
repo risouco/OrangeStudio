@@ -18,7 +18,7 @@ type Props = {
 
 const ITEMS_PER_PAGE = 15;
 
-const TYPE_OPTIONS = ["すべて", "Mix", "Inst制作", "Inst制作+Mix"] as const;
+const TYPE_OPTIONS = ["すべて", "Mix", "Inst制作", "Inst制作+Mix", "複数人・コラボMix"] as const;
 
 const GENRE_OPTIONS = [
   "すべて",
@@ -49,9 +49,16 @@ export default function WorksGallery({ items }: Props) {
     const matchesType = (workType: string | null, filter: string): boolean => {
       if (filter === "すべて") return true;
       if (!workType) return false;
-      // Mix と Inst制作 のフィルタは Inst制作+Mix も含む
-      if (filter === "Mix") return workType === "Mix" || workType === "Inst制作+Mix";
-      if (filter === "Inst制作") return workType === "Inst制作" || workType === "Inst制作+Mix";
+      // Mix フィルタは Inst制作+Mix と 複数人・コラボMix も含む
+      if (filter === "Mix")
+        return (
+          workType === "Mix" ||
+          workType === "Inst制作+Mix" ||
+          workType === "複数人・コラボMix"
+        );
+      // Inst制作 フィルタは Inst制作+Mix も含む
+      if (filter === "Inst制作")
+        return workType === "Inst制作" || workType === "Inst制作+Mix";
       return workType === filter;
     };
     return items.filter((it) => {
