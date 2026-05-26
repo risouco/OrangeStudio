@@ -104,8 +104,8 @@ export default function PlansPage() {
 
               <div className="grid grid-cols-3 gap-4 md:gap-6 mb-10">
                 <div className="border-l border-[color:var(--accent)] pl-4">
-                  <p className="text-[10px] tracking-[0.3em] text-[color:var(--sub)] mb-2">
-                    PRICE
+                  <p className="text-[11px] text-[color:var(--sub)] mb-2">
+                    価格
                   </p>
                   <p className="text-lg font-light text-[color:var(--accent)]">
                     ¥18,000
@@ -115,19 +115,19 @@ export default function PlansPage() {
                   </p>
                 </div>
                 <div className="border-l border-[color:var(--accent)] pl-4">
-                  <p className="text-[10px] tracking-[0.3em] text-[color:var(--sub)] mb-2">
-                    DELIVERY
+                  <p className="text-[11px] text-[color:var(--sub)] mb-2">
+                    納期
                   </p>
                   <p className="text-lg font-light">
                     <span className="text-[color:var(--accent)]">10</span>日
                   </p>
                   <p className="text-[11px] text-[color:var(--sub)] mt-1">
-                    納期目安
+                    目安
                   </p>
                 </div>
                 <div className="border-l border-[color:var(--accent)] pl-4">
-                  <p className="text-[10px] tracking-[0.3em] text-[color:var(--sub)] mb-2">
-                    REVISION
+                  <p className="text-[11px] text-[color:var(--sub)] mb-2">
+                    修正
                   </p>
                   <p className="text-lg font-light">
                     <span className="text-[color:var(--accent)]">翌日</span>対応
