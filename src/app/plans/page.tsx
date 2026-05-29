@@ -121,9 +121,6 @@ export default function PlansPage() {
                   <p className="text-lg font-light">
                     <span className="text-[color:var(--accent)]">10</span>日
                   </p>
-                  <p className="text-[11px] text-[color:var(--sub)] mt-1">
-                    目安
-                  </p>
                 </div>
                 <div className="border-l border-[color:var(--accent)] pl-4">
                   <p className="text-[11px] text-[color:var(--sub)] mb-2">
@@ -218,6 +215,17 @@ export default function PlansPage() {
                   </div>
                 </div>
               </CollapsiblePanel>
+
+              <div className="mt-10 text-center">
+                <a
+                  href="https://forms.gle/wZskn2r85vem6jmQ7"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block px-10 py-4 text-sm tracking-[0.2em] bg-[color:var(--accent)] text-white border border-[color:var(--accent)] hover:bg-[#C66A22] hover:border-[#C66A22] transition-colors duration-300"
+                >
+                  ご依頼用グーグルフォームはこちら →
+                </a>
+              </div>
             </article>
           </Reveal>
 
