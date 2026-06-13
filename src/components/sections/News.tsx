@@ -1,3 +1,4 @@
+import { Tweet } from "react-tweet";
 import Reveal from "@/components/ui/Reveal";
 import SectionHeader from "@/components/ui/SectionHeader";
 import { getNews } from "@/lib/notion";
@@ -8,6 +9,23 @@ function fmtDate(d: string | null): string {
   const m = d.match(/^(\d{4})-(\d{2})-(\d{2})/);
   if (!m) return d;
   return `${m[1]}.${m[2]}.${m[3]}`;
+}
+
+// 本文中の X / Twitter ポストURL から status ID を抽出
+const TWEET_URL_RE =
+  /https?:\/\/(?:x\.com|twitter\.com)\/[^/\s]+\/status\/(\d+)(?:\?\S*)?/g;
+
+function extractTweetIds(body: string): string[] {
+  const ids: string[] = [];
+  for (const m of body.matchAll(TWEET_URL_RE)) {
+    if (!ids.includes(m[1])) ids.push(m[1]);
+  }
+  return ids;
+}
+
+// 本文から X ポストURLを除いた残りテキスト
+function stripTweetUrls(body: string): string {
+  return body.replace(TWEET_URL_RE, "").replace(/\n{3,}/g, "\n\n").trim();
 }
 
 export default async function News() {
@@ -36,9 +54,24 @@ export default async function News() {
                 </time>
                 <div>
                   <h3 className="text-base font-normal mb-2">{n.title || "—"}</h3>
-                  {n.body && (
-                    <p className="text-sm text-[color:var(--sub)] leading-[1.9]">{n.body}</p>
-                  )}
+                  {(() => {
+                    const tweetIds = n.body ? extractTweetIds(n.body) : [];
+                    const text = n.body ? stripTweetUrls(n.body) : "";
+                    return (
+                      <>
+                        {text && (
+                          <p className="text-sm text-[color:var(--sub)] leading-[1.9] whitespace-pre-wrap">
+                            {text}
+                          </p>
+                        )}
+                        {tweetIds.map((id) => (
+                          <div key={id} className="mt-3 flex justify-start [&_.react-tweet-theme]:my-0">
+                            <Tweet id={id} />
+                          </div>
+                        ))}
+                      </>
+                    );
+                  })()}
                 </div>
               </article>
             </Reveal>
