@@ -361,6 +361,26 @@ export default function PlansPage() {
               <p className="text-[11px] text-[color:var(--sub)] leading-[1.7] mt-2">
                 例：3分の楽曲の場合 → 基本¥10,000 ＋ 制作料¥30,000 ＝ <span className="text-[color:var(--fg)]">合計 ¥40,000</span>
               </p>
+
+              <div className="mt-10 flex flex-col sm:flex-row gap-3">
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLScDZu4HAWqZHVyQawOTwRMMHXtpgKR_IoP5RquJPpaxwCHO6w/viewform"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block text-center bg-[color:var(--accent)] text-white text-sm tracking-wide px-6 py-3 rounded hover:opacity-90 transition"
+                >
+                  Inst制作を依頼する
+                </a>
+                <a
+                  href="/works"
+                  className="inline-block text-center border border-[color:var(--accent)] text-[color:var(--accent)] text-sm tracking-wide px-6 py-3 rounded hover:bg-[color:var(--accent)] hover:text-white transition"
+                >
+                  Inst制作の実績を見る
+                </a>
+              </div>
+              <p className="text-[11px] text-[color:var(--sub)] leading-[1.7] mt-3">
+                ※ 制作実績は Works ページで「Inst制作」に絞ってご確認いただけます。
+              </p>
             </article>
           </Reveal>
 
